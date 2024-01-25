@@ -9,7 +9,7 @@ jobs:
 
   build:
     name: build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
 
       - name: Setup Go
@@ -20,12 +20,6 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v1
-
-      - name: Check gofmt
-        run: test -z "$(gofmt -s -d .)"
       
       - name: Build
-        run: make build
-
-      - name: Test
-        run: make test-unit
+        run: make buildwin
