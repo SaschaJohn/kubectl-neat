@@ -1,6 +1,6 @@
 # kubectl-neat
 
-Remove clutter from Kubernetes manifests to make them more readable.
+Remove clutter from Kubernetes manifests to make them more readable!
 
 ## Demo
 
