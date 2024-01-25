@@ -25,7 +25,7 @@ test-integration: dist/kubectl-neat_$(os)_$(arch).tar.gz dist/kubectl-neat_$(os)
 
 build: dist/kubectl-neat_$(os)_$(arch)
 
-buildwin: dist/kubectl-neat_windows_amd64
+buildwin: dist/kubectl-neat_windows_amd64.exe
 
 SRC = $(shell find . -type f -name '*.go' -not -path "./vendor/*")
 dist/kubectl-neat_%: $(SRC)
