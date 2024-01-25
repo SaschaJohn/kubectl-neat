@@ -25,6 +25,8 @@ test-integration: dist/kubectl-neat_$(os)_$(arch).tar.gz dist/kubectl-neat_$(os)
 
 build: dist/kubectl-neat_$(os)_$(arch)
 
+buildwin: dist/kubectl-neat_windows_amd64
+
 SRC = $(shell find . -type f -name '*.go' -not -path "./vendor/*")
 dist/kubectl-neat_%: $(SRC)
 	GOOS=$(call underscore,$*,1) GOARCH=$(call underscore,$*,2) go build -o dist/$(@F)
